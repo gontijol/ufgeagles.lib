@@ -17,7 +17,7 @@ class _FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
   List _isHovering = [false, false, false, false];
   List<Widget> rowElements = [];
 
-  List<String> items = ['Sobre Nós', 'Players', 'Staff', 'Conquistas'];
+  List<String> items = ['Sobre Nós', 'Seletivas', 'Staff', 'Conquistas'];
   List<IconData> icons = [
     Icons.mark_chat_unread_outlined,
     Icons.people,

@@ -21,16 +21,16 @@ class BottomBar extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     BottomBarColumn(
-                      heading: 'ABOUT',
-                      s1: 'Contact Us',
-                      s2: 'About Us',
-                      s3: 'Careers',
+                      heading: 'SOBRE',
+                      s1: 'Linktree',
+                      s2: 'Fotos',
+                      s3: 'Nossa História',
                     ),
                     BottomBarColumn(
-                      heading: 'HELP',
+                      heading: 'AJUDA',
                       s1: 'Payment',
                       s2: 'Cancellation',
-                      s3: 'FAQ',
+                      s3: 'Vagas disponíveis',
                     ),
                     BottomBarColumn(
                       heading: 'SOCIAL',
@@ -49,10 +49,6 @@ class BottomBar extends StatelessWidget {
                   text: 'ufgeagles@gmail.com',
                 ),
                 SizedBox(height: 5),
-                InfoText(
-                  type: 'Address',
-                  text: '128, Trymore Road, Delft, MN - 56124',
-                ),
                 SizedBox(height: 20),
                 Divider(
                   color: Colors.blueGrey,
@@ -74,22 +70,22 @@ class BottomBar extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     BottomBarColumn(
-                      heading: 'ABOUT',
-                      s1: 'Contact Us',
-                      s2: 'About Us',
-                      s3: 'Careers',
+                      heading: 'SOBRE',
+                      s1: 'Vagas disponíveis',
+                      s2: 'Fotos',
+                      s3: 'Nossa História',
                     ),
                     BottomBarColumn(
-                      heading: 'HELP',
-                      s1: 'Payment',
-                      s2: 'Cancellation',
-                      s3: 'FAQ',
+                      heading: 'STREAMS',
+                      s1: 'Twitch',
+                      s2: 'Youtube',
+                      s3: 'Nimo',
                     ),
                     BottomBarColumn(
-                      heading: 'SOCIAL',
+                      heading: 'REDES SOCIAIS',
                       s1: 'Twitter',
                       s2: 'Facebook',
-                      s3: 'YouTube',
+                      s3: 'Instagram',
                     ),
                     Container(
                       color: Colors.blueGrey,
@@ -104,10 +100,6 @@ class BottomBar extends StatelessWidget {
                           text: 'ufgeagles@gmail.com',
                         ),
                         SizedBox(height: 5),
-                        InfoText(
-                          type: 'Endereço',
-                          text: 'Endereço Teste... rua teste...',
-                        )
                       ],
                     ),
                   ],
