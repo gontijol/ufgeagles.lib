@@ -130,29 +130,19 @@ class _TopBarContentsState extends State<TopBarContents> {
                   });
                 },
                 onTap: () {},
-                child: Text(
-                  'Cadastrar',
-                  style: TextStyle(
-                    color: _isHovering[2] ? Colors.white : Colors.white70,
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: const <Widget>[
+                    Icon(
+                      Icons.account_circle,
+                      color: Colors.white,
+                      size: 24.0,
+                    ),
+                  ],
                 ),
               ),
               SizedBox(
                 width: screenSize.width / 50,
-              ),
-              InkWell(
-                onHover: (value) {
-                  setState(() {
-                    value ? _isHovering[3] = true : _isHovering[3] = false;
-                  });
-                },
-                onTap: () {},
-                child: Text(
-                  'Logar',
-                  style: TextStyle(
-                    color: _isHovering[3] ? Colors.white : Colors.white70,
-                  ),
-                ),
               ),
             ],
           ),
