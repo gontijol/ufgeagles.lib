@@ -12,7 +12,7 @@ class BottomBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(30),
-      color: Colors.blueGrey[900],
+      color: Colors.blue.shade900,
       child: ResponsiveWidget.isSmallScreen(context)
           ? Column(
               children: [
@@ -44,10 +44,6 @@ class BottomBar extends StatelessWidget {
                   color: Colors.blueGrey,
                 ),
                 SizedBox(height: 20),
-                InfoText(
-                  type: 'Email',
-                  text: 'ufgeagles@gmail.com',
-                ),
                 SizedBox(height: 5),
                 SizedBox(height: 20),
                 Divider(
@@ -86,21 +82,6 @@ class BottomBar extends StatelessWidget {
                       s1: 'Twitter',
                       s2: 'Facebook',
                       s3: 'Instagram',
-                    ),
-                    Container(
-                      color: Colors.blueGrey,
-                      width: 2,
-                      height: 150,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        InfoText(
-                          type: 'Email',
-                          text: 'ufgeagles@gmail.com',
-                        ),
-                        SizedBox(height: 5),
-                      ],
                     ),
                   ],
                 ),

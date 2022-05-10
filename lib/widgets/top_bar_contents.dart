@@ -18,12 +18,14 @@ class _TopBarContentsState extends State<TopBarContents> {
     false,
     false,
     false,
-    false
+    false,
+    false,
   ];
 
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
+    var _controller = TextEditingController();
 
     return PreferredSize(
       preferredSize: Size(screenSize.width, 1000),
@@ -129,7 +131,99 @@ class _TopBarContentsState extends State<TopBarContents> {
                     value ? _isHovering[2] = true : _isHovering[2] = false;
                   });
                 },
-                onTap: () {},
+                onTap: () {
+                  showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          elevation: 20,
+                          content: Stack(
+                            clipBehavior: Clip.none,
+                            children: [
+                              Container(
+                                width: 500,
+                                height: 500,
+                              ),
+                              Positioned(
+                                child: Row(
+                                  children: [
+                                    InkResponse(
+                                      child: Icon(
+                                        Icons.close,
+                                        size: 25,
+                                        color: Colors.red,
+                                      ),
+                                      onTap: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Center(
+                                child: Text("Painel Administrativo"),
+                                heightFactor: 8,
+                                widthFactor: 3.2,
+                              ),
+                              Form(
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                        top: 170,
+                                        left: 40,
+                                        right: 40,
+                                      ),
+                                      child: TextField(
+                                        decoration: InputDecoration(
+                                          hintText: 'Usuário',
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                        top: 60,
+                                        left: 40,
+                                        right: 40,
+                                      ),
+                                      child: TextField(
+                                        decoration: InputDecoration(
+                                          hintText: 'Senha',
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                        top: 75,
+                                      ),
+                                      child: Container(
+                                        height: 50,
+                                        width: 100,
+                                        child: ElevatedButton(
+                                          style: ButtonStyle(
+                                            overlayColor:
+                                                MaterialStateProperty.all(
+                                              Colors.green[700],
+                                            ),
+                                            backgroundColor:
+                                                MaterialStateProperty.all(
+                                              Colors.green,
+                                            ),
+                                          ),
+                                          onPressed: () {},
+                                          child: const Text('Entrar'),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        );
+                      });
+                },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: const <Widget>[

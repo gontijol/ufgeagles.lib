@@ -23,7 +23,7 @@ class BottomBarColumn extends StatelessWidget {
           Text(
             heading,
             style: TextStyle(
-              color: Colors.blueGrey[300],
+              color: Colors.white,
               fontSize: 18,
               fontWeight: FontWeight.w500,
             ),
